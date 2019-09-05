@@ -1,0 +1,71 @@
+body {
+    background-color: #001a41;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+#perfil {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    max-width: 40rem;
+}
+
+#perfil img {
+    border-radius: 50%;
+    max-width: 15rem;
+    margin-bottom: 1rem;
+}
+#perfil #terminal {
+    background-color: black;
+    padding: 0 0.5rem;
+}
+
+#ps1 {
+    color: greenyellow;
+}
+
+.blinking-bar {
+    display: inline-block;
+    width: 0.35rem;
+    background-color: white;
+    animation: example 1s steps(2, start) infinite;
+}
+
+@keyframes example {
+    to {
+        visibility: hidden;
+    }
+  }
+
+#perfil #terminal p {
+    font-size: 0.95rem;
+    color: white;
+    font-family: monospace;
+}
+
+#links {
+    display: flex;
+}
+
+#links > * {
+    margin: 0 1.5rem;
+}
+
+#links img {
+    width: 5rem;
+}
+
+#uw {
+	color: darkcyan;
+	position: absolute;
+	right: 2422px;
+	bottom: 0;
+	font-size: 12px;
+}
