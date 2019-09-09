@@ -10,9 +10,9 @@
 <body>
     <div id="main">
         <div id="perfil">
-            <img src="perfil.jpg" alt="Perfil">
+            <img src="perfil.jpg" class="t" alt="Perfil">
             <div id="terminal">
-                <p><span id="ps1">root@localhost:~$</span> cat description.txt</p>
+                <p><span id="ps1">root@localhost:~$</span> cat descricao.txt</p>
                 <p>Atualmente trabalho com desenvolvimento mobile
                     e as vezes acabo dando uma ajuda no back-end.
                     Estou estudando liguangens funcionais, entre
@@ -22,29 +22,32 @@
         </div>
         <div id="links">
             <a href="https://github.com/gcacoutinho">
-                <img class="icon" id="github" src="github.svg" alt="Link Github">
+                <img class="t" id="github" src="github.svg" alt="Link Github">
             </a>
             <a href="https://twitter.com/gcacoutinho">
-                <img class="icon" id="twitter" src="twitter.svg" alt="Link Twitter">
+                <img class="t" id="twitter" src="twitter.svg" alt="Link Twitter">
             </a>
-            <a href="https://linkedin.com/gcacoutinho">
-                <img class="icon" id="linkedin" src="linkedin.svg" alt="Link Linkedin">
+            <a href="https://www.linkedin.com/in/gabriel-coutinho-b8560010a">
+                <img class="t" id="linkedin" src="linkedin.svg" alt="Link Linkedin">
             </a>
         </div>
         <span id="uw">também curto tela ultrawide</span>
-        <span id="mozao" style="color: pink;position: absolute;left: 0;opacity: 0;font-size: 16px;top: 0;">NAMORADA LINDA</span>
     </div>
 
     <script>
-        let cursor = 0;
-        const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+        let c = 0;
+        const KC = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
         document.addEventListener('keydown', (e) => {
-        cursor = (e.keyCode == KONAMI_CODE[cursor]) ? cursor + 1 : 0;
-        if (cursor == KONAMI_CODE.length) activate();
+        c = (e.keyCode == KC[c]) ? c + 1 : 0;
+        if (c == KC.length) { a(); c = 0; }
         });
 
-        function activate() {
-            document.querySelector("#mozao").className = "animar";
+        function a() {
+            e = document.querySelectorAll(".t");
+            for(i of e) { 
+                if (i.classList.contains("r")) i.classList.remove("r");
+                else i.classList.add("r");
+            }
         }
     </script>
 </body>
