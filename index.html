@@ -2,9 +2,9 @@
 <html>
 
 <head>
-	<title>Gabriel Coutinho</title>
-	<meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <title>Gabriel Coutinho</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
 <body>
@@ -22,14 +22,31 @@
         </div>
         <div id="links">
             <a href="https://github.com/gcacoutinho">
-                <img class="icon" id="github" src="github_light.png" alt="Link Github">
+                <img class="icon" id="github" src="github.svg" alt="Link Github">
             </a>
             <a href="https://twitter.com/gcacoutinho">
-                <img class="icon" id="twitter" src="twitter_white.svg" alt="Link Twitter">
+                <img class="icon" id="twitter" src="twitter.svg" alt="Link Twitter">
+            </a>
+            <a href="https://linkedin.com/gcacoutinho">
+                <img class="icon" id="linkedin" src="linkedin.svg" alt="Link Linkedin">
             </a>
         </div>
         <span id="uw">também curto tela ultrawide</span>
+        <span id="mozao" style="color: pink;position: absolute;left: 0;opacity: 0;font-size: 16px;top: 0;">NAMORADA LINDA</span>
     </div>
+
+    <script>
+        let cursor = 0;
+        const KONAMI_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+        document.addEventListener('keydown', (e) => {
+        cursor = (e.keyCode == KONAMI_CODE[cursor]) ? cursor + 1 : 0;
+        if (cursor == KONAMI_CODE.length) activate();
+        });
+
+        function activate() {
+            document.querySelector("#mozao").className = "animar";
+        }
+    </script>
 </body>
 
 </html>
