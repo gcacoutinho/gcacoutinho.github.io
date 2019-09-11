@@ -4,6 +4,7 @@
 <head>
     <title>Gabriel Coutinho</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
@@ -35,20 +36,7 @@
     </div>
 
     <script>
-        let c = 0;
-        const KC = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-        document.addEventListener('keydown', (e) => {
-        c = (e.keyCode == KC[c]) ? c + 1 : 0;
-        if (c == KC.length) { a(); c = 0; }
-        });
-
-        function a() {
-            e = document.querySelectorAll(".t");
-            for(i of e) { 
-                if (i.classList.contains("r")) i.classList.remove("r");
-                else i.classList.add("r");
-            }
-        }
+        let c=0;const KC=[38,38,40,40,37,39,37,39,66,65];function a(){for(i of(e=document.querySelectorAll(".t"),e))i.classList.contains("r")?i.classList.remove("r"):i.classList.add("r")}document.addEventListener("keydown",e=>{(c=e.keyCode==KC[c]?c+1:0)==KC.length&&(a(),c=0)});
     </script>
 </body>
 
