@@ -62,14 +62,6 @@ body {
     width: 5rem;
 }
 
-#uw {
-	color: darkcyan;
-	position: absolute;
-	right: 2422px;
-	bottom: 0;
-	font-size: 12px;
-}
-
 .r {
     animation: r 5s linear infinite;
 }
