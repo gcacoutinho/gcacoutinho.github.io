@@ -18,9 +18,9 @@ body {
 }
 
 #perfil img {
-    border-radius: 50%;
     max-width: 15rem;
     margin-bottom: 1rem;
+	clip-path: circle(50%);
 }
 #perfil #terminal {
     background-color: black;
